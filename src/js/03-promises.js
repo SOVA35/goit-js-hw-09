@@ -7,7 +7,7 @@ function createPromise(position, delay) {
   } else {
     reject({ position, delay })
   }
-}
+};
 
 const formEl = document.querySelector('.form');
 formEl.addEventListener('submit', onSubmitForm);
