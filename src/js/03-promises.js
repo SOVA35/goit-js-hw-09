@@ -1,8 +1,9 @@
-function createPromise(position, delay) {
-  const shouldResolve = Math.random() > 0.3;
-  if (shouldResolve) {
-    // Fulfill
-  } else {
-    // Reject
-  }
+
+const formEl = document.querySelector('.form');
+formEl.addEventListener('submit', onSubmitForm);
+
+function onSubmitForm(evt) {
+  evt.preventDefault();
+
+  let delay = Number(e.currentTarget.delay.value);
 }
