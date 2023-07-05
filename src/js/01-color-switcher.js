@@ -11,15 +11,17 @@ stopBtn.addEventListener('click', stopSwichingColor);
 
 function startSwichingColor() {
   startBtn.disabled = true;
-  intervalID = setInterval(changeColor, 700);  
-
-}
-function stopSwichingColor() {
   stopBtn.disabled = false;
-  clearInterval(intervalID);
-}
+  intervalID = setInterval(changeColor, 700);
+};
+function stopSwichingColor() {
+  stopBtn.disabled = true;
+  startBtn.disabled = false ;
+   clearInterval(intervalID);
+};
 function changeColor() {
   document.body.style.background=getRandomHexColor();
-}
+};
 
 
+ 
