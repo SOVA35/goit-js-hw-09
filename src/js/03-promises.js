@@ -35,10 +35,10 @@ function onSubmitForm(evt) {
     .catch(({ position, delay }) => {
       setTimeout(() => {
         Notify.failure(`Rejected promise ${position} in ${delay}ms`)
-      }, delay)
+      }, delay);
     });
   delay += step;
-}
+  };
   evt.target.reset();
 };
 
