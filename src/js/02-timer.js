@@ -22,7 +22,7 @@ flatpickr(calendar, {
   onClose(selectedDates) {
     
     if (selectedDates[0].getTime() < Date.now()) {
-      Notify.failure(`Error! Please, choose correct date.`)
+      Notify.failure(` Please choose a date in the future`)
     } else {
       startBtn.disabled = false;
       const setTimer = () => {
