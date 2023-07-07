@@ -1,6 +1,7 @@
 import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
 import 'flatpickr/dist/themes/dark.css';
+import { Notify } from 'notiflix';
 
 
 const COUTDOWN_TIMER_DELAY = 1000;
@@ -21,6 +22,7 @@ flatpickr(calendar, {
   onClose(selectedDates) {
     
     if (selectedDates[0].getTime() < Date.now()) {
+      Notify.failure(`Error! Please, choose correct date.`)
     } else {
       startBtn.disabled = false;
       const setTimer = () => {
